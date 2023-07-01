@@ -1,0 +1,211 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Ricky Fan} \\ \vspace{1pt}
+    \small 647-901-9951 $|$ \href{mailto:x@x.com}{\underline{fanh11@mcmaster.ca}} $|$ 
+    \href{https://linkedin.com/in/rfan}{\underline{linkedin.com/in/rfan}} $|$
+    \href{https://github.com/R-Fan9}{\underline{github.com/R-Fan9}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {McMaster University}{Hamilton, ON}
+      {Bachelor of Applied Science in Computer Science}{Sept. 2019 -- Present}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Developer Intern}{May 2023 -- Present}
+      {BlackBerry QNX}{Ottawa, ON}
+      \resumeItemListStart
+        \resumeItem{Learned about safety certified, POSIX compliant, microkernel RTOS – QNX. Experienced with interrupts, virtual memory and thread implementation on freestanding x86 architecture}
+        \resumeItem{Developed a QNX internal PyPi package by leveraging JIRA and Jenkins APIs to automate change log request process}
+      \resumeItemListEnd
+      
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {Software Developer Intern}{Sept 2022 -- April 2023}
+      {GEOTAB}{Oakville, ON}
+      \resumeItemListStart
+        \resumeItem{Debugged and fixed parallel tests failure due to race condition with mutex lock in C\#, reduced test failure by 98\%}
+        \resumeItem{Refactored gRPC code in C\# to improve maintainability and testability, wrote unit tests using mocks/stubs to achieve 100\% test coverage}
+        \resumeItem{Developed and maintained an automated pipeline tool to deploy test rigs by leveraging GitLab CI, Terraform, Kubernetes, Helm, and GKE}
+        \resumeItem{Developed a CLI application using C\# to deploy Terraform modules, perform health check and generate test report on Gateway test servers}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineer Intern}{June 2022 -- Aug 2022}
+      {Publicis Sapient}{Toronto, ON}
+      \resumeItemListStart
+        \resumeItem{Developed an AI chatbot for a leading US telecommunication company using React, DialogFlow, and Java Spring Boot with microservice architecture}
+        \resumeItem{Developed two client – side microservices to query responses from DialogFlow AI agent, and handle SMS messaging (via Twilio API) for scheduled callback requests}
+        \resumeItem{Integrated MySQL database with Spring boot to store client information and scheduled request details}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Developer Intern}{Jan 2022 -- April 2022}
+      {CIBC}{Toronto, ON}
+      \resumeItemListStart
+        \resumeItem{Built an automation tool using Python (pandas) to track and validate server jobs migration from AutoSys R11.0 and MOA to AutoSys R11.36}
+        \resumeItem{Documented the automation tool with Module Interface Specification (MIS), utilized Model View Controller (MVC) design pattern, unit testing done with pytest}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Th3rdplace} \emph{}}{Feb 2020 -- Aug 2022}
+          \resumeItemListStart
+            \resumeItem{Built customised Docker images to containerize client and server applications, enabling the app to run on local, staging and production environments}
+            \resumeItem{Developed a CI/CD pipeline in GitLab by integrating Cloud Build, Cloud Run and Firebase Hosting}
+            \resumeItem{Configured and deploy CRON job with Cloud Function and Cloud Scheduler to enable weekly database backup}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{LiftJoint} \emph{}}{May 2020 -- Aug 2020}
+          \resumeItemListStart
+            \resumeItem{Developed a full-stack web application using with Django serving a REST API with React as the frontend}
+            \resumeItem{Client-side state management handled using Redux, used Bootstrap for responsive web design}
+            \resumeItem{Configured token – based authentication to ensure high security and OAuth2 authentication for third party login}
+            \resumeItem{Deployed and hosted the application on Digital Ocean, and configured a reverse proxy server using Nginx}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C\#, Java, Python, C/C++, Bash, JavaScript, Haskell, HTML} \\
+     \textbf{Database/Frameworks/Tools}{: Firebase, MySQL, Bootstrap, Node.js, React, Redux, .Net, Django, Git, CSS, Flutter, pandas, Docker, GCP, Spring Boot, GitLab CI, Terraform} \\
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
