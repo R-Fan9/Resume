@@ -1,0 +1,338 @@
+
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Angele Wen} \\ \vspace{1pt}
+    \small 514-557-7972 $|$ \href{mailto:x@x.com}{\underline{rou.wen@mail.mcgill.ca}} 
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {McGill University}{Montreal, QC}
+      {Bachelor of Arts, Psychology}{2020 -- 2023}
+      \resumeItemListStart
+        \resumeItem{Minors: Behavioural Science, Education psychology, East Asian Language and Literature }
+        \resumeItem{Honours-Equivalent Thesis: “Differentiating Variants of Primary Progressive Aphasia Using a Written Picture Description” (Supervisor: Dr. Maxime Montembeault)}
+        \resumeItem{Laurie J. Hendren Opal Scholarship 2022 (awarded)}
+        \resumeItem{MPSA Equity Award 2022 (held)}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Dawson College}{Montreal, QC}
+      {Diploma of College Studies (DEC), Psychology}{2018 -- 2020}
+      \resumeItemListStart
+        \resumeItem{Women's/Gender Studies}
+        \resumeItem{Semesterly Honors Letter of The Dawson College Academic Dean 2019}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------RESEARCH EXPERIENCE-----------
+\section{Research Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Research Assistant}{2023 -- Present}
+      {McGill University (Department of Educational and Counselling Psychology)}{Montreal, QC}
+   \resumeSubSubheading
+    {Cultural and Indigenous Research in Counselling Psychology}{Dr. Dennis C. Wendt}
+    \resumeItemListStart
+       \resumeItem{Research data for qualitative research, make comparison tables on the amount of qualitative research done by different APA and APS journals, finalize and proof-read articles before submitting for publishing, note-taker for discussions in conferences}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Research Assistant}{2023 -- Present}
+      {McGill University (Department of Educational and Counselling Psychology)}{Montreal, QC}
+   \resumeSubSubheading
+    {Social Justice and Diversity Research Lab}{Dr. Ada L. Sinacore, Dr. Eleanor Gittens}
+    \resumeItemListStart
+       \resumeItem{Conduct a scoping review on current police diversity trainings, research on components that make these trainings effective, put together a PowerPoint and present at the CPA Annual Convention, participate at the Equity-Centered meeting with the CPA board members and other psychologists and psychology students}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Research Assistant}{2023 -- Present}
+      {University of Quebec in Montreal (Department of Psychology)}{Montreal, QC}
+   \resumeSubSubheading
+    {Culture, Identity \& Language Lab}{Dr. Marina M. Doucerain}
+    \resumeItemListStart
+       \resumeItem{Recruit participants for a longitudinal study on effects of second language on mental health, provide feedback to presentations, presentations of articles, conduct experiment using ECG on use of second language and stress}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Research Assistant}{2022 -- 2023}
+      {McGill University (Department of Psychology)}{Montreal, QC}
+   \resumeSubSubheading
+    {Lydon lab}{Dr. John E. Lydon}
+    \resumeItemListStart
+       \resumeItem{Recruit and schedule participants, enter and proof data, and help the graduate students in various tasks such as running experiments and perform literature search. The Lydon lab studies interpersonal relationships with a cognitive approach, including the formation and maintenance of social bonds and social factors that influence one’s thoughts and feelings}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Research Assistant}{2021 -- 2023}
+      {McGill University (Department of Educational and Counselling Psychology)}{Montreal, QC}
+   \resumeSubSubheading
+    {Development and Intrapersonal Resilience research team}{Dr. Nancy Heath}
+    \resumeItemListStart
+       \resumeItem{Participated in the making of mental health infographics for schools in Asia, research evidence-based resources, transcribed audio recordings, helped in the development of mental health apps. The DAIR lab focuses on well-being and mental health resilience of the youth and adolescent population. Our team conducts applied and basic research on emotion regulatory difficulties, stress, coping, mindfulness, and non-suicidal self-injury}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Summer Research Student}{2022}
+      {The Research Institute of the McGill University Health Center (RI-MUHC)}{Montreal, QC}
+   \resumeSubSubheading
+    {Opal team}{Dr. Andréa Laizner, Dr. John Kildea}
+    \resumeItemListStart
+       \resumeItem{Laurie J. Hendren Opal Scholarship recipient. Helped develop an AI-matching algorithm that matches cancer patients for peer support. I reviewed literatures, designed, and conducted semi-structured interviews with patients, analyzed and coded the qualitative data from the results obtained, and presented final project at the poster day}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Research Assistant}{2022}
+      {McGill University (Department of Educational and Counselling Psychology)}{Montreal, QC}
+   \resumeSubSubheading
+    {Science and Practice in Psychology}{Dr. Annett Korne}
+    \resumeItemListStart
+       \resumeItem{German qualitative data entry and management, review study documents, contribute to research presentation and publications. The lab focuses on the use of science in professional psychology, the knowledge translation and clinician-researcher collaboration, and the science-based psychological and psycho-educational interventions}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Research Assistant}{2021}
+      {McGill University (Department of Educational and Counselling Psychology)}{Montreal, QC}
+   \resumeSubSubheading
+    {Talwar Research Lab}{Dr. Victoria Talwar}
+    \resumeItemListStart
+       \resumeItem{Conducted interviews with young participants of North America and China for various studies. The lab focuses on children’s social interactions, truth-telling and lie-telling, eyewitness testimony, and understanding of concepts of false-belief}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROFESSIONAL EXPERIENCE-----------
+\section{Professional Experience}
+    \resumeSubHeadingListStart
+ 
+      \resumeSubheading
+        {Project Lead}{2022 -- 2023}
+        {Th3rdplace}{Montreal, QC}
+        \resumeItemListStart
+          \resumeItem{Participate in the growth of a start-up, organize events to mitigate loneliness in university students, lead an operation team, mentored 8 Venture For Canada interns, build outreach plans, communicate with university deans and student associations for partnerships, marketing, UX design, and social media posting}
+      \resumeItemListEnd
+
+      \resumeSubheading
+        {Conseillère en réadaptation}{2020 -- 2023}
+        {Indemnisation des victimes d’actes criminels (IVAC)}{Montreal, OC}
+        \resumeItemListStart
+          \resumeItem{Make phone calls to the victims of criminal acts, make judgements, and offer services suitable to the victims, and write reports. IVAC is a Quebec government regime. Our mandate is to provide benefits and services offered to victims of criminal acts inside the province of Quebec}
+        \resumeItemListEnd
+
+      \resumeSubheading
+        {Teacher}{2019}
+        {Daycare Foundation school at the Shaar}{Montreal, QC}
+        \resumeItemListStart
+          \resumeItem{Took care of 3-4 years old children, planned daily activities, communicated with parents, reported daily events to superiors, intervened in emergency situations}
+        \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------PRESENTATIONS-----------
+\section{Presentations}
+    \resumeItemListStart
+      \resumeItem{Sinacore, A. L., Gittens, E., Wen, R., \& Pierre-Sindore, T. (2023, June 26). Enhancing Police Diversity Trainings Symposium. Canadian Psychological Association Convention 2023, Toronto, ON} \\
+      \resumeItem{Wen, R., Kildea, J., Laizner, A., \& Mittal, R. (2022, July 26). OncoBuddy/OncoConseil AI-Powered Matching Algorithm Selection Criteria [Poster presentation]. Summer Research Day Poster Presentation, Montreal, QC} \\
+    \resumeItemListEnd
+
+%-----------VOLUNTEERING-----------
+\section{Volunterring}
+    \resumeSubHeadingListStart
+ 
+      \resumeSubheading
+        {Civilian Instructor}{2020 -- Present}
+        {Cadets program, 1 West Montreal Squadron}{Montreal, QC}
+        \resumeItemListStart
+          \resumeItem{Initiated a new inter-squadron ESport contest among the whole region of the Greater Montreal, first online event ever organized in the program of cadets created to adapt to the situation of COVID-19. Help with administrative tasks, supervision on events, train and coach leadership and comportment}
+      \resumeItemListEnd
+
+      \resumeSubheading
+        {Event organizer \& research committee}{2023 -- Present}
+        {Young Asian Health Professional Association}{Montreal, OC}
+        \resumeItemListStart
+          \resumeItem{Make phone calls to the victims of criminal acts, make judgements, and offer services suitable to the victims, and write reports. IVAC is a Quebec government regime. Our mandate is to provide benefits and services offered to victims of criminal acts inside the province of Quebec}
+        \resumeItemListEnd
+
+      \resumeSubheading
+        {Mentor}{2022 -- 2023}
+        {McGill Mentor Program}{Montreal, QC}
+        \resumeItemListStart
+          \resumeItem{Connect with a first-year psychology student to guide them through first year of university. Answer any questions they have about the program and student life. Give valuable advice from personal experience about how to maintain school-life balance}
+        \resumeItemListEnd
+
+      \resumeSubheading
+        {Assistant}{2021 -- 2022}
+        {Équipe psychologique}{Montreal, QC}
+        \resumeItemListStart
+          \resumeItem{Assist in projects, data entry, support in conference (chat managing, answer questions, back-up presenter), make calls to patients, brainstorm ideas for new projects, meet with the team every week to discuss on recent activities}
+        \resumeItemListEnd
+
+      \resumeSubheading
+        {Volunteer}{2018}
+        {Best Buddies}{Montreal, QC}
+        \resumeItemListStart
+          \resumeItem{Best Buddies supports adults with intellectual and developmental disabilities by matching them with a student without disability. The program promotes inclusivity and improves the quality of life in the IDD population. Spent time with special needs adults over 21 years of age for an hour a week}
+        \resumeItemListEnd
+
+      \resumeSubheading
+        {Assistant Manager}{2017}
+        {UniMed Center}{New Jersey, US}
+        \resumeItemListStart
+          \resumeItem{Paperwork, front desk, answered calls and scheduled appointments between patients and hospitals}
+        \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------ADDITIONAL TRAINING-----------
+\section{Additional Training}
+    \resumeSubHeadingListStart
+ 
+      \resumeSubheading
+        {Cadets program}{2013 -- 2019}
+        {1 West Montreal Squadron}{Montreal, QC}
+        \resumeItemListStart
+          \resumeItem{Proficiency in leadership and teamwork. Participated in marksmanship competitions, drill competitions (team commander for 2 years), biathlon, and triathlon. Organized drill team 2016 to 2018, trainings once a week, performance at the end of year parade. Summer camp staff in 2018}
+      \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------CERTIFICATES-----------
+\section{Certificates}
+    \resumeItemListStart
+      \resumeItem{McMedHacks Certificate of Completion of Summer Coding Workshop} \\
+      \resumeItem{Ethical Conduct for Research Involving Humans Course on Research Ethics (TCPS 2: CORE) Certificate} \\
+      \resumeItem{Women's/Gender Studies} \\
+      \resumeItem{International Baccalaureate Certificate} \\
+    \resumeItemListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Software}{: SPSS, JASP, Python, Excel, Word, PowerPoint, Photoshop} \\
+    }}
+ \end{itemize}
+
+%-----------LANGUAGES-----------
+\section{Languages}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{French, English}{: high level written, oral and comprehension} \\
+     \textbf{Mandarin, Cantonese}{: high level oral and comprehension, mid-level written} \\
+     \textbf{Spanish, Korean}{: minimum level written, oral and comprehension} \\
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
