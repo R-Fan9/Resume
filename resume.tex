@@ -160,7 +160,7 @@
           {\textbf{\href{https://github.com/R-Fan9/spx}{spx}} \emph{| Rust, Tokio, gRPC}}{Feb 2026 -- Jun 2026}
           \resumeItemListStart
             \resumeItem{Implemented a Multi-Paxos protocol in Rust, combining Raft's leader election with Spanner-style leader leases and TrueTime for external consistency}
-            \resumeItem{Designed a four-role state machine (Follower, Pre-Candidate, Candidate, Leader) driven by a single tokio::select! loop multiplexing I/O, lease expiry, and heartbeat timers}
+            \resumeItem{Designed a four-role state machine (Follower, Pre-Candidate, Candidate, Leader) driven by a single event loop multiplexing I/O, lease expiry, and heartbeat timers}
             \resumeItem{Built time-bounded leader leases and commit-wait logic to safely serve local reads without quorum checks}
           \resumeItemListEnd
 
