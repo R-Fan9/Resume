@@ -11,7 +11,9 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\input{glyphtounicode}
+\makeatletter
+\@ifundefined{pdfglyphtounicode}{}{\input{glyphtounicode}}
+\makeatother
 
 
 %----------FONT OPTIONS----------
@@ -51,7 +53,9 @@
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
+\makeatletter
+\@ifundefined{pdfgentounicode}{}{\pdfgentounicode=1}
+\makeatother
 
 %-------------------------
 % Custom commands
@@ -101,7 +105,7 @@
 %----------HEADING----------
 \begin{center}
     \textbf{\Huge \scshape Ricky Fan} \\ \vspace{1pt}
-    \small 647-901-9951 $|$ \href{mailto:x@x.com}{\underline{fanh11@mcmaster.ca}} $|$ 
+    \small 647-901-9951 $|$ \href{mailto:rickyhzfan@gmail.com}{\underline{rickyhzfan@gmail.com}} $|$ 
     \href{https://linkedin.com/in/rfan}{\underline{linkedin.com/in/rfan}} $|$
     \href{https://github.com/R-Fan9}{\underline{github.com/R-Fan9}}
 \end{center}
@@ -112,7 +116,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {McMaster University}{Hamilton, ON}
-      {Bachelor of Applied Science in Computer Science}{Sept. 2019 -- Present}
+      {Bachelor of Applied Science in Computer Science, GPA: 3.88/4.0}{Sept. 2019 -- April 2024}
   \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------   
@@ -120,54 +124,52 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Software Developer Intern}{Sept 2022 -- April 2023, Sept 2023 -- Present}
+      {Software Developer}{June 2024 -- Present}
       {GEOTAB}{Oakville, ON}
       \resumeItemListStart
-        \resumeItem{Debugged and fixed parallel tests failure due to race condition with mutex lock in C\#, reduced test failure by 98\%}
-        \resumeItem{Refactored Protobuf message procecessor in Gateway to improve maintainability and testability, wrote unit tests using mocks/stubs to achieve 100\% test coverage}
-        \resumeItem{Developed and maintained an automated pipeline tool to deploy test rigs by leveraging GitLab CI, Terraform, Kubernetes, Helm, and GKE}
-        \resumeItem{Developed a CLI application (GatewayPiper) using C\# to deploy Terraform modules, perform health check and generate test report on Gateway test servers}
-        \resumeItem{Created E2E tests for bidirectional passthrough message delivery between MyGeotab clients and devices}
-        \resumeItem{Developed a C\# code documentation generator that parses StoreForward API code into Markdown syntax, streamlining Gateway's documentation process.}
-        \resumeItem{Implemented a mechanism to prevent multilog preloading for inactive clients by tracking the last updated information of the client (vehicle) data offset.}
-        \resumeItem{Updated Gateway resend vehicle data APIs to promptly deliver resent data at the top of the stream to support sequential data processing}
+        \resumeItem{Led the multi-region migration of the High Availability Gateway Registry, an Orleans service serving device metadata, moving cluster membership from Kubernetes etcd to Cloud Spanner and single-cluster ingress to a Cross-Region ALB with Istio mesh}
+        \resumeItem{Built the supporting GCP infrastructure in Terraform (cross-region ALB, DNS geo-routing, VPC peering) and validated rollouts with k6 load tests scaled to 60 replicas}
+        \resumeItem{Removed an N+1 Orleans grain activation pattern causing cluster-wide P99 latency spikes, replacing per-vehicle grain calls with one bulk Spanner query that cut a 1,000-vehicle cold request from 94s to 3.4s}
+        \resumeItem{Re-architected message delivery in the telematics gateway from semaphore-based locking to a channel-based writer, eliminating production write timeouts on persistent device socket connections}
+        \resumeItem{Decoupled the gateway from Geotab's fleet-management monolith by pruning transitive references across 20+ modules and containerizing it for independent deployment}
+        \resumeItem{Built Grafana and Superset dashboards covering the Istio service mesh, registry cluster health, and per-stage data-download latency, isolating bottlenecks during on-call incidents}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Developer Intern}{Sept 2022 -- April 2023, Sept 2023 -- May 2024}
+      {GEOTAB}{Oakville, ON}
+      \resumeItemListStart
+        \resumeItem{Debugged and fixed parallel test failures caused by a mutex race condition in C\#, reducing test failures by 98\%}
+        \resumeItem{Refactored Gateway's Protobuf message processor for maintainability and testability, achieving 100\% coverage with mock/stub-based unit tests}
+        \resumeItem{Developed an automated pipeline tool and a C\# CLI (GatewayPiper) to deploy test rigs and run health checks using GitLab CI, Terraform, Kubernetes, Helm, and GKE}
     \resumeItemListEnd
-    
+
     \resumeSubheading
       {Software Developer Intern}{May 2023 -- Aug 2023}
       {BlackBerry QNX}{Ottawa, ON}
       \resumeItemListStart
-        \resumeItem{Learned about safety certified, POSIX compliant, microkernel RTOS – QNX. Experienced with bootloader, interrupts, physical \& virtual memory and thread implementation on freestanding x86 architecture}
-        \resumeItem{Developed a QNX internal PyPi package by leveraging JIRA and Jenkins APIs to automate change log request process. 
-        Further optimized the module's runtime by utilizing multithreading techniques to enable multiple concurrent request processes}
+        \resumeItem{Developed an internal PyPI package leveraging the Jira and Jenkins APIs to automate the change-log request process for a safety-certified microkernel RTOS, using multithreading to service concurrent requests}
       \resumeItemListEnd
 
-    \resumeSubheading
-      {Software Engineer Intern}{June 2022 -- Aug 2022}
-      {Publicis Sapient}{Toronto, ON}
-      \resumeItemListStart
-        \resumeItem{Developed an AI chatbot for a leading US telecommunication company using React, DialogFlow, and Java Spring Boot with microservice architecture}
-        \resumeItem{Developed two client – side microservices to query responses from DialogFlow AI agent, and handle SMS messaging (via Twilio API) for scheduled callback requests}
-        \resumeItem{Integrated MySQL database with Spring Boot to store client information and scheduled request details}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Software Developer Intern}{Jan 2022 -- April 2022}
-      {CIBC}{Toronto, ON}
-      \resumeItemListStart
-        \resumeItem{Built an automation tool using Python (pandas) to track and validate server jobs migration from AutoSys R11.0 and MOA to AutoSys R11.36. Documented the automation tool with Module Interface Specification (MIS), utilized Model View Controller (MVC) design pattern, unit testing done with pytest}
-      \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{Th3rdplace} \emph{}}{Feb 2021 -- Aug 2022}
+          {\textbf{\href{https://github.com/R-Fan9/spx}{spx}} \emph{| Rust, Tokio, gRPC}}{Feb 2026 -- Jun 2026}
           \resumeItemListStart
-            \resumeItem{Built customised Docker images to containerize client and server applications, enabling the app to run on local, staging and production environments}
-            \resumeItem{Developed a CI/CD pipeline in GitLab by integrating Cloud Build, Cloud Run and Firebase Hosting}
-            \resumeItem{Configured and deploy CRON job with Cloud Function and Cloud Scheduler to enable weekly database backup}
+            \resumeItem{Implemented a Multi-Paxos protocol in Rust, combining Raft's leader election with Spanner-style leader leases and TrueTime for external consistency}
+            \resumeItem{Designed a four-role state machine (Follower, Pre-Candidate, Candidate, Leader) driven by a single tokio::select! loop multiplexing I/O, lease expiry, and heartbeat timers}
+            \resumeItem{Built time-bounded leader leases and commit-wait logic to safely serve local reads without quorum checks}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{\href{https://github.com/R-Fan9/x86OS}{x86OS}} \emph{| C, x86 Assembly}}{May 2023 -- Sep 2023}
+          \resumeItemListStart
+            \resumeItem{Built a 32-bit x86 OS from scratch, including a two-stage bootloader transitioning the CPU from 16-bit real mode to 32-bit protected mode}
+            \resumeItem{Implemented core kernel subsystems (GDT, IDT, PIC, TSS) and interrupt handlers for page faults, syscalls, the PIT timer, keyboard, and floppy disk controller}
+            \resumeItem{Developed a virtual memory manager with paging, a higher-half kernel, a DMA floppy disk driver, and a FAT12 file system}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
@@ -177,8 +179,9 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: C\#, Java, Python, C/C++, Bash, JavaScript, Haskell, HTML} \\
-     \textbf{Database/Frameworks/Tools}{: Firebase, MySQL, Bootstrap, Node.js, React, Redux, .Net, Django, Git, CSS, Flutter, pandas, Docker, GCP, Spring Boot, GitLab CI, Terraform} \\
+     \textbf{Languages}{: C\#, Rust, Python, Java, C/C++, x86 Assembly, Bash, JavaScript, SQL} \\
+     \textbf{Cloud \& Infrastructure}{: GCP, Kubernetes (GKE), Terraform, Helm, ArgoCD, Istio, Docker, GitLab CI} \\
+     \textbf{Frameworks \& Tools}{: .NET, Orleans, gRPC, Protobuf, Tokio, Spring Boot, React, Node.js, Cloud Spanner, PostgreSQL, Grafana, Prometheus, Superset, k6, Git} \\
     }}
  \end{itemize}
 
