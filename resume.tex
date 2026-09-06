@@ -128,11 +128,11 @@
       {GEOTAB}{Oakville, ON}
       \resumeItemListStart
         \resumeItem{Led the multi-region migration of the High Availability Gateway Registry, an Orleans service serving device metadata, moving cluster membership from Kubernetes etcd to Cloud Spanner and single-cluster ingress to a GCP Cross-Region ALB with Istio mesh}
-        \resumeItem{Built the supporting GCP infrastructure in Terraform (cross-region ALB, DNS geo-routing, VPC peering) and validated rollouts with k6 load tests scaled to 60 replicas}
-        \resumeItem{Removed an N+1 Orleans grain activation pattern causing cluster-wide P99 latency spikes, replacing per-device grain calls with one bulk Spanner query that cut a 1,000-device cold request from 94s to 3.4s}
+        \resumeItem{Built the supporting GCP infrastructure in Terraform (cross-region ALB, DNS geo-routing, VPC peering) and validated cross-region failover with k6 load tests at 60 replicas per cluster}
+        \resumeItem{Removed an N+1 Orleans grain activation pattern causing cluster-wide P99 latency spikes, replacing per-device grain calls with one bulk Spanner query that cut a 1,000-device cold request by 96\%}
         \resumeItem{Re-architected message delivery in Gateway, Geotab's device data-ingestion service, from semaphore-based locking to a channel-based writer, eliminating production write timeouts on persistent device socket connections}
         \resumeItem{Decoupled Gateway from Geotab's fleet-management monolith by pruning transitive references across 20+ modules and containerizing it for independent deployment}
-        \resumeItem{Built Grafana and Superset dashboards covering the Istio service mesh, registry cluster health, and per-stage data-download latency, isolating bottlenecks during on-call incidents}
+        \resumeItem{Built Grafana and Superset dashboards covering the Istio service mesh, Gateway Registry cluster health, and per-stage data-download latency, isolating bottlenecks during on-call incidents}
       \resumeItemListEnd
 
     \resumeSubheading
