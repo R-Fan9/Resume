@@ -1,0 +1,35 @@
+resume.tex
+  s_c219ad3f702321::t_33ccbd28dc2626 160
+  s_c219ad3f702321::t_f39c3929c64562 151
+  s_c219ad3f702321::t_b0f1aea826bbad 162-164
+  s_c219ad3f702321::t_53b6323d2eaa0d 132
+  s_c219ad3f702321::t_13d594e841467b 119
+  s_c219ad3f702321::t_3a0fb6790f4976 108
+  s_c219ad3f702321::t_1b81c8d44740fc 127,139-140,142-144
+  s_c219ad3f702321::t_2a8497116b7628 168
+  s_c219ad3f702321::t_ebee24bd5db7ae 170-172
+  s_c219ad3f702321::t_0bb0b8e6f022ea 14-16
+  s_c219ad3f702321::t_6feca0c1db133c 161,165-167
+  s_c219ad3f702321::t_353cf4e57e1327 130
+  s_c219ad3f702321::t_e7d5761e9650d9 56-58
+  s_c219ad3f702321::t_1bdd2b70798aac 131,133-135
+  s_c219ad3f702321::t_1fa0ae6476a052 182-184
+  s_c219ad3f702321::t_2c0dec42341a6e 145
+  s_c219ad3f702321::t_0c9ab917a810dc 148-149,153
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "ec8de9ba6088b0d3db4a90a8e46ae4036b53a0a1",
+  "prompts": {},
+  "sessions": {
+    "s_c219ad3f702321": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9f1d35eb-8f21-472e-830d-0b7cc16636eb",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Ricky Fan <haozhengfan@geotab.com>"
+    }
+  }
+}
