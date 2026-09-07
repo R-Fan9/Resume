@@ -1,0 +1,19 @@
+resume.tex
+  s_c73e5b34cb08eb::t_96b038f7612d99 151
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "38e6b04236cec44676f592057198caf9339962bf",
+  "prompts": {},
+  "sessions": {
+    "s_c73e5b34cb08eb": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d7f9e093-65d1-4d93-8f7b-1ede2cbec697",
+        "model": "claude-sonnet-5"
+      },
+      "human_author": "Ricky Fan <haozhengfan@geotab.com>"
+    }
+  }
+}
